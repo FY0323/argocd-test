@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testdeployment
+  name: testapp-fail
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test
+      app: fail
   template:
     metadata:
-      name: testpod
+      name: testpod-fail
       labels:
-        app: test
+        app: fail
     spec:
       containers:
         - name: nginx-container
-          image: nginx:latest
+          image: 394881379225.dkr.ecr.ap-northeast-1.amazonaws.com/test/test03:latest
           ports:
           - containerPort: 80
