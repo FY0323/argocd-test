@@ -1,13 +1,12 @@
-apiVerrsion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: testdeployment
 spec:
-  replicas: 1
+  replicas: 13
   selector:
     matchLabels:
       app: test
-  errorData:
   template:
     metadata:
       name: testpod
